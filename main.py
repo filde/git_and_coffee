@@ -14,7 +14,7 @@ class AddCoffee(QDialog):
         cur = con.cursor()
         res = cur.execute("""SELECT * FROM roastings WHERE id""").fetchall()
         self.obg.addItems([i[1] for i in res])
-        self.types.addItems(['В зёрнах', 'Молотый'])
+        self.types.addItems(['в зёрнах', 'молотый'])
         self.id = int(item_id)
         if coffee:
             self.setWindowTitle('Редактирование записи')
